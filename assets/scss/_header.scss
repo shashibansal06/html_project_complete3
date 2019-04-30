@@ -1,0 +1,186 @@
+.header{
+	@include pos(f,0 auto auto 0);
+	width: 100%;
+	padding: 40px 0;
+	z-index: 5;
+	@media screen and (max-width:1400px){
+		padding: 30px 0;
+	}
+	@media screen and (max-width:992px){
+		padding: 10px 0;
+	}
+	@media screen and (max-width:767px){
+		padding: 5px 0;
+	}
+	&.fixedHeader {
+		background-color: $blue-color;
+		padding: 10px 0;
+	}
+	.menu-icon{
+		display: none;
+		@media screen and (max-width:992px){
+			display: block;
+		}	
+		i{
+			@include text-format(26px,$white-color,400);
+			cursor: pointer;
+		}
+	}	
+	.custom-nav{
+		@media screen and (max-width:992px){
+			@include pos(f,0 auto auto 0);
+			width: 250px;
+			height: 100vh;
+			background-color: $white-color;
+			z-index:2;
+			display: none;
+		}
+		ul{ 
+			margin-bottom: 0;
+			margin-top: 3px;
+			li{
+				@media screen and (max-width:992px){
+					width:100%;
+					display: inline-block;
+					margin: 5px 0;					 
+				}
+				a{ 
+					@include text-format(16px,$color-db,400);
+					@include display(middle);
+					padding: 6px 15px;
+					margin: 0;
+					@media screen and (max-width:1400px){
+						font-size:14px;
+						padding: 4px 10px;
+					}
+					@media screen and (max-width:992px){
+						display: block;
+						padding: 8px 10px;
+						color: $black-color;
+					}
+					&:hover{
+						color: $yellow-color;
+					}
+				}
+			}
+		}
+	}
+	.right-nav{
+		ul{
+			margin-bottom: 0;
+			margin-top: 3px;
+			li{
+				@include pos(r, null);
+				margin: 0;
+				&::before{
+					@include pos(a, calc(50% - 10px) 0 auto auto);
+					content: '';
+					height:20px;
+					width:1px;
+					background-color: $white-color;
+					@media screen and (max-width:1400px){
+						height:16px;
+						top:calc(50% - 8px);
+					}
+					@media screen and (max-width:992px){
+						height:14px;
+						top:calc(50% - 7px);
+					}
+				}
+				&:last-child{
+					&::before{
+						content: none;
+					}
+				}
+				a{
+					@include text-format(16px,$white-color,400);
+					@include display(middle);
+					padding: 6px 15px;
+					margin: 0;
+					@media screen and (max-width:1400px){
+						font-size:14px;
+						padding: 4px 10px;
+					}
+					@media screen and (max-width:992px){
+						font-size:12px;					
+					}
+					&:hover{
+						background-color: $yellow-color;
+						.custom-dropdown{
+							display: block;
+						}				
+					}
+					i{
+						margin-left: 10px;
+						font-size: 12px;
+						@media screen and (max-width:1400px){
+							font-size: 10px;
+							margin-left: 5px;						
+						}
+						&.icon-user{
+							font-size: 24px;
+							vertical-align: middle;
+							display: inline-block;
+							@media screen and (max-width:992px){
+								font-size: 16px;
+							}
+						}
+					}
+					img{
+						margin-right: 10px;
+						@media screen and (max-width:1400px){
+							margin-right: 5px;
+						}
+					}
+				}
+				&.drop-hover{
+					a{
+						&:hover{
+							background-color: $transparent-color;
+						}
+					}
+				}
+				.custom-dropdown{
+					@include pos(a, 60px 0 auto auto);
+					&::before{
+					@include pos(a, -16px 30px auto auto);
+					}
+					&.login-dropdown{
+						li{
+							a{
+								color:$blue-text;
+							}
+						}
+					}
+					li{
+						a{
+							@include text-format(14px,$color-42,400);
+							&.btn {
+								@include text-format(16px,$white-color,400);
+								text-transform: uppercase;
+								padding: 12px 5px;
+								margin-bottom: 15px;
+								@media screen and (max-width:1400px){
+									font-size: 14px;
+									padding: 10px 5px;
+								}
+								i{
+									font-size: 20px;
+									margin-right: 5px;
+									@include display(middle);
+									@media screen and (max-width:1400px){
+										font-size: 18px;
+									}
+								}
+								&.fb-btn{
+									background-color: $color-fb;
+								}								
+							}
+
+						}
+					}
+				}				
+			}
+		}
+	}
+}

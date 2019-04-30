@@ -1,0 +1,442 @@
+// Extend search form layout
+
+%bannerFormLayout{
+	background-color: rgba(0,0,0,0.39);
+	padding: 30px 30px 15px 30px;
+	@media screen and (max-width:992px){
+		padding: 15px 15px 0 15px;		
+	}
+	[class*="col-"]{
+		padding: 0 5px;
+	}
+	.pack-title{
+		@include text-format(20px,white,600);
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+	form{
+		.radio-outer{
+			margin-bottom: 25px;
+		}
+		button{
+			&.clos-btn{
+				@include text-format(40px,#969fa9,400);
+				background-color: transparent;
+				padding: 0;
+				border: 0 none;
+				line-height: 45px;
+				cursor: pointer;
+				@media screen and (max-width:992px){
+					font-size: 30px;
+					line-height: 35px;
+				}
+			}
+		}
+		.toggle-btn {
+			@include pos(a, calc(50% - 22px) auto auto calc(50% - 14px));
+			z-index: 9;
+			background: white;
+			border: 1px solid $color-42;
+			@include square(28px);
+			text-align: center;
+			padding: 0;
+			cursor: pointer;
+			@media screen and (max-width:992px){
+				@include square(20px);
+				top:calc(50% - 20px);
+				left:calc(50% - 10px);
+			}
+			i{
+				@media screen and (max-width:992px){
+					font-size: 14px;
+					display: block;
+				}
+			}
+		}
+		.form-group{
+			input,select{
+				padding: 12px 20px;
+				@include text-format(16px,#898888,400);
+				margin: 0;	
+				@media screen and (max-width:992px){
+					font-size: 14px;
+					padding: 6px 10px;		
+				}    					
+			}
+			&.cal-btn{
+				@include pos(r, null);
+				&:before{
+					@include pos(a, 8px auto auto 15px);
+	             	color: #a2a2a2; 
+	             	content: "\e914";
+	             	font-family: 'icomoon' !important;  
+	             	font-size: 22px;
+	             	@media screen and (max-width:992px){
+						font-size: 16px;
+						top:5px;
+					}    
+				}
+				input{
+					padding-left:38px; 
+					@media screen and (max-width:992px){
+						padding-left:30px; 
+					}  
+				}  
+			}	
+			button{
+				&.btn{
+					background-color:$yellow-color;
+					@include text-format(16px,$white-color,600);
+					text-transform: uppercase;
+					 @include radius(0px);
+					 padding: 12px 0;
+					 min-width: 10px;
+					 @media screen and (max-width:992px){
+						font-size: 14px;
+						padding: 6px 0;
+					}   
+					 i{
+					 	font-size: 18px;
+					 	margin-right: 5px;
+					 	@media screen and (max-width:992px){
+	    					font-size: 16px;
+	    				}
+					 }
+					 &.white-btn{
+					 	background-color: transparent;
+					 	border: 1px solid white;
+					 }
+				}
+			}			
+			.input-dropdown{
+				width:340px;
+				background-color: $white-color;
+				padding: 30px;
+				display: none;
+				@include box-shadow(rgba(0,0,0,0.2) 0px 0px 5px);
+				@include pos(a, 74px auto auto calc(50% - 170px));
+				z-index:9;
+				@media screen and (max-width:1200px){
+					width:300px;
+					padding: 20px;
+					left:calc(50% - 150px);								
+				}
+				@media screen and (max-width:992px){
+					top: 54px;
+				}
+				@media screen and (max-width:767px){
+					width:260px;
+					padding: 10px;
+					left:calc(50% - 130px);
+				}
+				&::before{
+				@include pos(a, -16px auto auto calc(50% - 6px));
+					content: '';
+					border-bottom: 16px solid $white-color;
+					border-right: 12px solid transparent;
+					border-left: 12px solid transparent;				
+				}
+				.room-select{
+					text-align: left;
+					border-top:1px solid $color-ee;
+					padding-top: 20px;
+					&:first-child{
+						border: 0 none;
+						padding-top: 0;
+					}
+					h3{
+						@include text-format(16px,#293135,400);
+						padding-top: 0;
+						padding-bottom: 20px;
+						@media screen and (max-width:1200px){
+	    					font-size: 14px;
+	    					padding-bottom: 15px;
+	    				}
+						.close{
+							cursor: pointer;
+						}
+					}
+					ul{
+						li{
+							padding: 0 0 15px 0;
+							@media screen and (max-width:1200px){
+		    					padding: 0 0 10px 0;
+		    				}
+		    				@media screen and (max-width:767px){
+		    					padding: 0 0 5px 0;
+		    				}
+							h2{
+								width:50%;
+								padding: 0;
+								@include display(middle);
+								@include text-format(14px,$color-42,400);
+								text-align: left;
+								text-transform: none;
+								@media screen and (max-width:1200px){
+			    					font-size: 13px;		
+			    				}
+								span{
+									color: $color-80;
+								}
+							}
+							h4{
+								width:48%;
+								vertical-align: middle;
+								margin-bottom: 0;
+								button{
+									background-color: transparent;
+									color:$color-80;
+									font-size: 30px;
+									padding: 0;
+									border: 0 none; 
+									@media screen and (max-width:1200px){
+				    					font-size: 24px;
+				    				}
+				    				@media screen and (max-width:767px){
+				    					font-size: 20px;
+				    				}
+								}
+								input{
+									width:40px;
+									@include text-format(14px,$color-42,400);
+									border: 0 none;
+									padding:8px 6px;
+									margin: 0 5px;
+								}
+							}
+						}
+					}
+				}
+				.drop-foot{
+					border-top:1px solid $color-ee;
+					padding-top: 15px;
+					.btn{
+						&.add-roombtn{
+							@include text-format(16px,#293135,400);
+							border: 1px solid #293135;
+							background-color: white;
+							padding:10px 12px;
+							min-width: 10px;
+							cursor: pointer;
+							@media screen and (max-width:1200px){
+		    					font-size: 14px;
+		    					padding:8px 10px;
+		    				}
+		    				@media screen and (max-width:767px){
+		    					padding:4px 10px;
+		    				}
+						}	
+					} 
+					.done-link{
+						float: right;
+						margin-top: 10px;
+						cursor: pointer;
+						@include text-format(16px,#293135,400);
+						background-color: transparent;
+						padding:0;
+						border: 0 none;
+						@media screen and (max-width:1200px){
+	    					font-size: 14px;
+	    				}
+	    				@media screen and (max-width:767px){
+	    					margin-top: 5px;
+	    				}
+					}
+				}
+				&.pricedropdown{
+			      	@extend %priceDropdown;
+			    }
+			}
+		}
+		&.home-form{
+			&.row , .row{
+				margin:0 -5px; 
+			}
+		}
+	}
+	}
+
+
+%priceDropdown{
+		li{
+			@media screen and (max-width:1200px){
+				width:100%;
+			}
+		}
+		h3{
+			@include text-format(15px,$color-42,400);
+		}
+		.range{
+			margin: 10px 0;
+		}
+		.pricebtn{
+			span{
+				@include display(middle);
+				width:49%;
+				a{
+					display: inline-block;
+					min-width: 10px;
+					width: auto;
+					padding: 0;
+					text-align: right;
+					@include text-format(15px,$color-42,400);
+					&.yellow{
+						color: $yellow-color;
+					}
+				}
+			}
+		}
+	}
+
+
+.banner{
+	padding: 145px 0 60px 0 ;	
+	background:{
+		image: url(../images/banner-bg.jpg);
+		size: cover;
+		repeat: no-repeat;
+	}
+	@media screen and (max-width:767px){
+		padding: 120px 0 40px 0 ;
+	}
+	.inner-banner{		
+		h2{
+			text-align: center;
+			text-transform: uppercase;
+			@include text-format(30px,$white-color,400);
+			@media screen and (max-width:992px){
+				font-size: 24px;
+			}
+			@media screen and (max-width:767px){
+				font-size: 18px;
+			}
+			span{
+				color: $yellow-color;
+			}	
+		}
+		p{
+			text-align: center;
+			@include text-format(18px,$color-f9,400);
+			line-height: 25px;	
+			color:$white-color;
+			@media screen and (max-width:992px){
+				font-size: 14px;
+			}
+		}
+		.banner-search{
+			.input-group input.form-control{
+		        border: 0 none;
+		        color:$color-42;
+		        font-size: 16px;
+		        background-color:$white-color;
+		        padding: 20px 25px;
+		        @include radius(0px);
+		        @media screen and (max-width:992px){
+					padding: 10px 15px;
+				}
+	        }
+	        .input-group-btn button{
+		        cursor: pointer;
+		        font-size: 26px;
+		        width: 70px;
+		        @include radius(0px);
+		        background-color: $yellow-color;
+		        @media screen and (max-width:992px){
+		        	 font-size: 20px;
+		        }
+	        }
+	    }
+	    .banner-form{
+	    	margin: 50px 0 115px 0;
+	    	@media screen and (max-width:767px){
+				margin: 0px;		
+			}
+	    	.banner-tab{
+	    		ul{
+	    			li{
+	    				margin-right: 85px;
+	    				@include display(middle);
+	    				@media screen and (max-width:1200px){
+	    					margin-right: 40px;
+	    				}
+	    				@media screen and (max-width:767px){
+	    					margin-right: 10px;	    					
+	    				}
+	    				@media screen and (max-width:565px){
+	    					margin-right: 0px;	    					
+	    				}
+	    				a{
+	    					text-transform: uppercase;
+	    					padding-bottom: 25px;
+	    					@include text-format(17px,$white-color,400);
+	    					@include pos(r, null);
+	    					@include display(middle);
+	    					overflow: hidden;
+	    					@media screen and (max-width:1200px){
+	    						font-size: 14px;
+	    						padding-bottom: 18px;
+	    					}
+	    					@media screen and (max-width:767px){
+	    						padding-bottom: 12px;
+	    						margin-bottom: 10px;
+	    						font-size: 13px;
+	    					}
+	    					@media screen and (max-width:565px){
+	    						font-size: 0;
+	    						text-align: center;
+	    						padding:15px; 
+	    						margin-bottom: 0;
+	    					}
+	    					&:before{
+						        @include pos(a, auto auto 0 0);
+						        background-color:$yellow-color;
+						        height:5px;
+						        width:100%;
+						        content: '';  
+						        @include translateX(-100%);  
+						        @include transition(compact(all 0.3s linear));
+						        @media screen and (max-width:1200px){
+						        	height:3px;
+						        }
+						        @media screen and (max-width:992px){
+						        	height:2px;
+						        }
+						    } 
+	    					i{
+	    						font-size: 28px;
+	    						width: 30px;
+	    						@include display(middle);
+	    						margin-right: 10px;
+	    						@media screen and (max-width:1200px){
+	    							font-size: 18px;
+	    							margin-right: 5px;
+	    							width: 22px;
+	    						}
+	    						@media screen and (max-width:565px){
+		    						margin-right: 0px;
+		    					}
+	    					}
+	    					&.active, &:hover{
+	    						@media screen and (max-width:565px){
+	    							color: $yellow-color;
+	    						}
+	    						&:before{
+							        @include translateX(0%);  
+							    } 
+							    @media screen and (max-width:565px){
+							    	background-color: rgba(0, 0, 0, 0.39);
+							    	&:before{
+								        @include translateX(-100%);  
+								    } 
+							    }
+	    					}
+	    				}
+	    			}
+	    		}
+	    	}
+	    	.bnr-tab-content{
+	    		@extend %bannerFormLayout;
+	    	}
+	    }
+	}
+}

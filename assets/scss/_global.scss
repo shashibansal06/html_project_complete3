@@ -1,0 +1,412 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* Reset */
+ul,li{
+  list-style: none;
+  margin:0;
+  padding:0;  
+}
+a{
+  color: $color-e3;
+}
+a:focus{
+  outline: 0 none;
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  font-family: $family !important; 
+  background-color: $color-f8;
+}
+.padding-tb{
+  padding: 60px 0 50px 0;
+  @media screen and (max-width:992px){
+    padding: 30px 0 20px 0;
+  }
+}
+.section-title{
+  padding-bottom: 30px;
+  @media screen and (max-width:992px){
+    padding-bottom: 10px;
+  }
+  h2{
+    @include text-format(24px,$color-42,400);
+    text-transform: uppercase;
+    @media screen and (max-width:1400px){
+      font-size: 20px;
+    }
+    @media screen and (max-width:992px){
+      font-size: 18px;
+    } 
+    span{
+      color:$yellow-color;
+    }   
+  }
+  p{
+    color:$color-80;
+    font-size: 19px;
+    margin-bottom: 10px;
+    line-height: 28px;
+    @media screen and (max-width:992px){
+       font-size: 14px;
+       line-height: 20px;
+    }
+    &.light{
+      font-weight: 300;
+
+    }
+  }
+  .icon{    
+    span{
+      @include pos(r, null);
+      &:before ,  &:after{
+        @include pos(a, 12px auto auto -170px);
+        background-color: $color-cc;
+        height:1px;
+        width:160px;
+        content: '';    
+      } 
+      &:after{
+        left:auto;
+        right:-170px;
+      }
+    }
+  }
+}
+p{
+    @include text-format(16px,$color-42,400);
+    line-height: 21px;
+    padding-bottom:18px;
+    margin-bottom: 0;
+    @media screen and (max-width:1400px){
+      font-size: 14px;
+    }
+}
+h3{
+    @include text-format(20px,$color-28,600);
+    padding:10px 0;
+    margin-bottom: 0; 
+    @media screen and (max-width:1400px){
+      font-size: 16px;
+    }
+}
+.form-control:focus{
+   border-color: $blue-color !important;
+    @include box-shadow-none();
+}
+.custom-modal{  
+  .modal-content{
+    border: 0 none;
+    @include radius(0px);
+  }
+}
+
+
+  
+
+.radio-outer{
+    label{
+        &.z_radio{
+            @include pos(r, null);
+            @include text-format(18px,white,400);
+            margin-right: 20px;
+            @media screen and (max-width:1400px){
+              font-size: 14px;
+            }
+             @media screen and (max-width:565px){
+              display: block;
+            }
+            span{
+                @include padding-left(30);
+                @include pos(r, null);
+                &:after {
+                  @include pos(a, 7px auto auto 3px);
+                  content:none;
+                  @include square(14px);
+                  background-color:$yellow-color;  
+                  @include radius(50%); 
+                   @media screen and (max-width:1400px){
+                    @include square(10px);
+                   }                            
+                }
+                &:before {
+                  @include pos(a, 4px auto auto 0px );
+                  border:1px solid white; 
+                  content: "";      
+                  @include square(20px);
+                  @include radius(50%);  
+                   @media screen and (max-width:1400px){
+                    @include square(16px);
+                   }       
+                }
+            }
+            input[type="radio"]{
+                @include pos(a, 0px auto auto 0px );
+                visibility: hidden;
+                &:checked{
+                    &+ span{
+                        &:after{
+                            content:'';
+                        }
+                    }
+                }
+            }
+        }
+        &.z_checked{
+            @include pos(r, null);
+            @include text-format(16px,$color-42,400);
+            @media screen and (max-width:1400px){
+              font-size: 14px;
+            }
+           span{
+                @include padding-left(30);
+                @include pos(r, null);
+                cursor: pointer;
+                &:after {
+                  @include pos(a, 2px auto auto 3px );
+                  content:'';
+                  color:white;
+                  font-family:FontAwesome;
+                  font-size:16px; 
+                  @media screen and (max-width:1400px){
+                    font-size:12px; 
+                  }           
+                }
+                &:before {
+                  @include pos(a, 2px auto auto 0px);
+                  border:1px solid $color-42; 
+                  content: "";      
+                  @include square(22px);  
+                  @media screen and (max-width:1400px){
+                 @include square(18px);  
+                }              
+                }
+            }
+            input[type="checkbox"]{
+                @include pos(a, 0px auto auto 0px );
+                visibility: hidden;
+                &:checked{
+                    &+ span{
+                        &:after{
+                            content:"\f00c";
+                        }      
+                        &:before{
+                            background-color:$color-42; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}  
+
+.btn{
+  &.custom-btn{
+    background-color: $yellow-color;
+    @include radius(0px);
+    @include text-format(16px,$white-color,600);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px 15px;
+    @media screen and (max-width:1200px){
+      padding: 6px;
+      font-size: 14px;
+    }
+    @media screen and (max-width:1200px){
+      width:100%;
+      margin-bottom: 5px;
+    }
+    &.grey-btn{
+      background-color: $color-42;
+    }
+  }
+  &.viewmore-btn{
+    @include text-format(16px,$color-42,600);
+    text-transform: uppercase;
+    border: 1px solid $color-42;
+    @include radius(0px);
+    padding: 10px 20px;
+    &:hover{
+      border-color:$yellow-color;
+      color:$yellow-color;
+    }
+    @media screen and (max-width:992px){
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+  }
+}
+textarea{
+  min-height: 140px;
+}
+.form-group{
+  input,select,textarea{  
+    &.form-control{
+      @include text-format(16px,$color-42,400);
+      @include radius(0px);
+      padding: 15px 20px;
+      margin-top: 10px;
+      height: auto !important;
+      @media screen and (max-width:1200px){
+        font-size: 14px;
+        padding: 10px 15px;
+      }
+      @media screen and (max-width:767px){
+        margin-top:0px;
+      }
+    }  
+  }
+  .btn{
+    min-width: 180px;
+    cursor: pointer;
+    @media screen and (max-width:1200px){
+      min-width: 120px;
+    }
+  }
+  .select-outer{
+    @include pos(r, null);
+    &:after {
+      @include pos(a, calc(50% - 8px) 15px auto auto);
+      content: "\e900";
+      color:black;
+      font-family: 'icomoon' !important;
+      font-size:16px; 
+      @media screen and (max-width:1200px){
+        font-size:12px; 
+      }           
+    }
+    select{
+      @include appear(none);
+      @include pos(r, null);
+      background-color: transparent;
+      z-index:9;
+    }
+  }
+}
+
+
+.arrow{
+  &:before{
+            @include pos(a, calc(50% - 8px) 10px auto auto);
+            content: "\e900";
+            font-family: 'icomoon' !important;
+            font-size: 10px;
+          }
+        }          
+
+.custom-dropdown{
+    z-index:9;  
+    width:330px;
+    background-color: $white-color;
+    padding: 25px;
+    display: none;
+    @include pos(a, 80px auto auto calc(50% - 165px));
+    @include box-shadow(rgba(0,0,0,0.2) 0px 0px 5px);
+     @media screen and (max-width:1400px){
+        right:0;
+        left:auto;
+     }
+     @media screen and (max-width:1200px){
+      top:60px;
+     }
+     @media screen and (max-width:992px){
+      width:260px;
+      padding: 10px;      
+     }
+    &::before{
+      @include pos(a, -16px calc(50% - 6px) auto auto);
+      content: '';
+      border-bottom: 16px solid $white-color;
+      border-right: 12px solid transparent;
+      border-left: 12px solid transparent;
+      @media screen and (max-width:1400px){
+        right:30px;
+      }
+    }
+    li{
+      display: block;
+      width:100%;
+      &::before , &::after{
+        content:none !important;
+      }
+      a{
+        @include text-format(14px,$color-42,400);
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; 
+        &::before , &::after{
+          content:none !important;
+        }                 
+      }
+    }
+    &.pricedropdown{
+      @extend %priceDropdown;
+    }
+  }
+
+
+
+
+
+         .icon-crossmmark {
+            .cross__circle {
+               @include animation(stroke 0.8s ease 0s normal forwards 1 running);
+               fill: none;
+               margin: 0 auto;
+               stroke:red;
+               stroke-dasharray: 166;
+               stroke-dashoffset: 166;
+               stroke-width: 2;
+            }
+
+            .cross__path {
+               stroke: red;
+               stroke-dasharray: 48;
+               stroke-dashoffset: 48;
+               stroke-width: 2;
+
+               @include transform-origin(50% 50% 0);
+
+               &--right {
+                  @include animation(stroke 0.5s ease 0.8s normal forwards 1 running);
+               }
+
+               &--left {
+                  @include animation(stroke 1s ease 0.8s normal forwards 1 running);
+               }
+            }
+         }
+    
+
+    @include keyframes(checkmark) {
+   0% {
+      stroke-dashoffset: 50px;
+   }
+
+   100% {
+      stroke-dashoffset: 0;
+   }
+}
+
+
+@include keyframes(checkmark-circle) {
+   0% {
+      stroke-dashoffset: 240px;
+   }
+
+   100% {
+      stroke-dashoffset: 480px;
+   }
+}
+
+
+@include keyframes(stroke) {
+   100% {
+      stroke-dashoffset: 0;
+   }
+}
+
+.link{
+  @include text-format(16px,$color-42,400);
+}

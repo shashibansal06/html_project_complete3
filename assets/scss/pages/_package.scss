@@ -1,0 +1,169 @@
+
+.package-combine{
+	.pd-box{
+		&.hotel-search {
+			border-right: 1px dashed #dbdbdb;
+			margin-bottom: 0;
+			@media screen and (max-width:767px){
+				border-bottom: 1px dashed #dbdbdb;
+				border-right: 0 none;
+			}
+		}
+	}
+}
+
+.package-flight{
+	position: relative;
+	 &::before{
+	    @include pos(a, calc(50% - 15px) auto auto -13px);
+    	content: "\f055";
+     	z-index: 1;
+      	font-size: 30px;
+      	color: $color-80;
+	  	font-family: FontAwesome;
+	  	@media screen and (max-width:767px){
+	  		@include pos(a, -20px auto auto calc(50% - 13px));
+	  	}
+    }
+	%flightResult-box{
+	border: 0 none;
+	margin-top: 0px;
+	background-image: url('../images/plane-bg.jpg');
+	background-size: cover;
+	.flightmainOuter{
+		border-bottom:0 none;
+		.flight-main{
+			border-right:0 none;
+			h5{
+				&.p-loc{
+					margin-top: 20px;
+					@include text-format(16px,$color-42,400);
+					@media screen and (max-width:767px){
+						font-size: 14px;
+					}
+					strong{
+						@include text-format(26px,$color-42,600);
+						vertical-align: middle;
+						display: inline-block;
+						margin-right: 10px;
+						@media screen and (max-width:767px){
+							font-size: 20px;
+						}
+					}						
+				}
+			}
+			.infobox{					
+				.flightDetail-info{
+					.box{
+						width:41%;
+						&:nth-child(2){
+							width:12%;
+							@media screen and (max-width:992px){
+								width:100%;								
+							}
+							@media screen and (max-width:767px){
+								width:20%;
+								text-align: right;
+							}
+							@media screen and (max-width:576px){
+								width:100%;		
+								text-align: center;						
+							}
+						}
+						@media screen and (max-width:992px){
+							width:100%;
+							text-align: left ;
+						}
+						@media screen and (max-width:767px){
+							width:38%;
+							text-align: right ;
+						}
+						@media screen and (max-width:565px){
+							padding: 0;
+							width:100%;
+							text-align: left;
+						}
+						h2{
+							span{
+								@include text-format(29px,$color-42,600);
+								@media screen and (max-width:992px){
+									font-size: 24px;
+								}
+								@media screen and (max-width:767px){
+									font-size: 20px;
+								}
+							}
+						}
+						h3{
+							@include text-format(16px,$color-42,400);
+							@media screen and (max-width:1200px){
+								font-size:14px;
+							}
+						}						
+					}
+				}
+				.websiteList{
+					margin-top: 20px;
+					@media screen and (max-width:767px){
+						margin-bottom: 10px;
+						margin-top: 15px;
+					}
+					li{
+						display: inline-block;
+						border-left:1px solid $color-80;
+						padding: 0 8px;
+						line-height: 16px;
+						@media screen and (max-width:767px){
+							width:100%;
+							padding:5px 0;
+							border: 0 none; 
+						}
+						&:first-child{
+							padding-left: 0;
+							border: 0 none;
+						}
+						a{						
+							@include text-format(15px,$blue-text,400);
+						}
+					}
+				}
+			}
+							
+		}
+		
+	}		
+	.flightDetail{
+		padding:10px 0 20px 0px;
+		border-bottom: 0 none;
+		@media screen and (max-width:767px){
+			padding: 10px 0px;
+		}			
+	}
+	.flightWebsite{
+		padding: 10px 25px;
+		@media screen and (max-width:992px){
+			padding: 10px 10px;
+		}
+		@media screen and (max-width:767px){
+			padding: 10px 0px;
+		}
+			a{
+				&.btn{
+					&.custom-btn{
+						padding:8px 20px;
+						font-weight: 400;
+						width: auto;
+						@media screen and (max-width:767px){
+							margin-top: 10px;
+						}
+						i{
+							margin-left: 5px;
+						}
+					}
+				}
+
+			}
+		
+	}
+}
+}

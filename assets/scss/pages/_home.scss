@@ -1,0 +1,91 @@
+.in-pagecontainer{
+	.slider-outer{
+		padding:50px 0;
+		@media screen and (max-width:1200px){
+			padding:30px 0;
+		}
+		@media screen and (max-width:767px){
+			padding:15px 0;
+		}
+		.slder-main{
+			@include pos(r, null);
+			.slider-arrow{	
+				@include pos(a, -102px 0 auto auto);
+				@media screen and (max-width:1200px){
+					top:-70px;
+				}
+				@media screen and (max-width:992px){
+					top:-45px;
+				}
+				a{
+					@include square(42px);
+					background-color:$yellow-color;
+					color: $white-color;
+					display: inline-block;
+					text-align: center;
+					font-size: 24px;
+					line-height: 42px;
+					@media screen and (max-width:1200px){
+						@include square(30px);
+						line-height: 30px;
+					}
+					@media screen and (max-width:992px){
+						@include square(24px);
+						line-height: 24px;
+					}
+					&.next , &:hover , &.active{
+						background-color: #908f8f;
+					}
+				}
+			}
+			.slider-box{
+
+			}
+		} 
+		h4{
+			&.title{
+				padding:0 0 24px 0;
+				margin-bottom: 60px;
+				border-bottom: 1px solid #f1f1f1;
+				@include text-format(22px,$color-42,600);
+				text-transform: uppercase;
+				@include pos(r, null);
+				@media screen and (max-width:1200px){
+					margin-bottom: 40px;
+					padding:0 0 15px 0;
+					font-size: 18px;
+				}
+				@media screen and (max-width:992px){
+					margin-bottom: 20px;
+					padding:0 0 10px 0;
+					font-size: 16px;
+				}
+				&::before{
+					@include pos(a, auto auto 0 0);
+					content: '';
+					height:5px;
+					width:64px;
+					background-color: $yellow-color;
+					@media screen and (max-width:1200px){
+						height:3px;
+					}
+					@media screen and (max-width:992px){
+						height:2px;
+					}
+				}
+			}
+		}				
+		&.exclusive-suggest-sld{
+			background-color: $white-color;
+		}
+		&.package-deal-sld{
+			background-color: $color-f7;
+		}
+		&.popular-destination-sld{
+			background-color: $white-color;
+		}
+		&.travel-guides-sld{
+			background-color: $color-f7;
+		}
+	}
+}

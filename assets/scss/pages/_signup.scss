@@ -1,0 +1,145 @@
+.main-inner{
+	padding:0 0 75px 0;
+	@media screen and (max-width:992px){
+		padding: 0px 0 50px 0;
+	}
+	.before-login{
+		.custom-form{
+			.social-buttons{
+				.btn {
+					@include text-format(16px,$white-color,400);
+					text-transform: uppercase;
+					padding: 12px 5px;
+					margin-bottom: 15px;
+					@media screen and (max-width:1400px){
+						font-size: 14px;
+						padding: 10px 5px;
+					}
+					i{
+						font-size: 20px;
+						margin-right: 5px;
+						@include display(middle);
+						@media screen and (max-width:1400px){
+							font-size: 18px;
+						}
+					}
+					&.fb-btn{
+						background-color: $color-fb;
+					}
+					&.google-btn{
+						color: $color-42;
+						border-color:$color-42;
+					}
+				}
+			}
+			.or-box{
+				@include pos(r, null);
+				padding:10px 0;
+				margin-bottom: 25px;
+				&::before{
+					@include pos(a, calc(50%) 0 auto auto);
+					background-color: $color-e21;
+					height:1px;
+					width:100%;
+					content: '';		
+				}
+				h5{
+					@include pos(r, null);
+					margin-bottom: 0;
+					z-index:1;
+					background-color: $color-80;
+					@include text-format(18px,$white-color,600);
+					text-transform: uppercase;
+					@include square(56px);
+					line-height: 54px;
+					@media screen and (max-width:1400px){
+						@include square(40px);
+						line-height: 38px;
+						font-size: 14px;
+					}
+				}
+			}
+			.form-group{
+				input{
+					&.form-control{
+						border-color: $color-e21;
+						@include border-radius(0);						
+						@include text-format(16px,$color-89,400);
+						padding: 15px 15px 15px 55px;
+						@media screen and (max-width:1400px){
+							font-size: 14px;
+							padding: 10px 15px 10px 40px;
+						}
+					}
+				}
+				&.icon{
+					position: relative;
+					&::before{
+						@include pos(a, 10px auto auto 20px);						
+						font-size: 24px;
+						font-family: 'icomoon';	
+						color: $color-89;
+						@media screen and (max-width:1400px){
+							font-size: 18px;
+							top:9px;
+							left:10px;
+						}							
+					}
+					&.password-icon{
+						&::before{
+							content: "\e906";
+						}						
+					}
+					&.email-icon{
+						&::before{
+							content: "\e901";		
+						}
+					}
+				}				
+				button[type="submit"]{
+					background-color: $yellow-color;
+					@include text-format(16px,$white-color,600);
+					text-transform: uppercase;
+					padding: 15px 5px;
+					cursor: pointer;
+					@media screen and (max-width:1400px){
+						font-size: 14px;
+						padding: 10px 5px;
+					}
+					i{
+						margin-left: 10px;
+						@media screen and (max-width:1400px){
+							margin-left: 5px;
+						}
+					}
+				}
+				.forget-pswd{			
+					a{
+						@include text-format(16px,$color-42,400);
+						@media screen and (max-width:1400px){
+							font-size: 14px;
+						}
+					}
+				}
+			}
+			p{
+				&.pagelinks{
+					@include text-format(13px,$color-42,400);
+					a{
+						color:$blue-text;
+					}
+				}
+				&.bottom-text{
+					@include text-format(16px,$color-8a,400);
+					@media screen and (max-width:1400px){
+						font-size: 14px;
+					}
+					a{
+						color: $yellow-color;
+						font-weight: 600;
+					}
+				}				
+			}
+		}
+	}
+}

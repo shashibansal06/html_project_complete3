@@ -1,0 +1,12 @@
+.in-pagecontainer{
+	.tripfinder-box-out{
+		&.row , .row{
+			margin-left: -7px;
+			margin-right: -7px;
+		}
+		[class*="col-"]{
+			padding-left:7px;
+			padding-right:7px;
+		}
+	}
+}

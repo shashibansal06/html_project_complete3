@@ -1,0 +1,31 @@
+	h4{
+		&.title{
+			@include text-format(16px,$color-42,400);
+			margin: 30px 0 25px 0;
+		}
+	}
+	.filters{
+		@extend %filters;
+		ul{
+			li{
+				width:20%;				
+			}
+			&.search-listfield{
+				li{
+					@media screen and (max-width:1200px){
+						width: 20%;
+						min-width: 10px;
+					}
+					@media screen and (max-width:992px){
+						width: 30%;						
+					}	
+					@media screen and (max-width:767px){
+						width: 100%;					
+					}							
+				}
+			}
+		}
+	}
+	.flightResult-box{
+		@extend %flightResult-box;
+	}

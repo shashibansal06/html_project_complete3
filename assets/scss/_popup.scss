@@ -1,0 +1,166 @@
+.customModal{
+	.modal-content{
+		border-radius:0;
+		border: 0 none;
+		.modal-header{
+			border: 0 none;
+			padding: 0;
+			.close {
+				padding: 0;
+				margin:15px 15px -15px auto;
+				font-size: 35px;
+				line-height: 15px;
+			}
+		}
+		.modal-body{
+			padding:60px;
+			@media screen and (max-width:992px){
+				padding:30px 40px 40px 40px;
+			}
+			@media screen and (max-width:767px){
+				padding:20px 15px 20px 15px;
+			}
+			&.loginModal{
+				text-align: center;
+				h5{
+					.icon{
+						color:#1b80e7;
+						font-size: 70px;
+						margin-bottom: 10px;
+						@media screen and (max-width:992px){
+							font-size: 50px;
+						}
+					}
+				}
+				h2{
+					text-transform: uppercase;
+					@include text-format(21px,$color-42,600);
+					margin-top: 25px;
+					@media screen and (max-width:767px){
+						font-size: 15px;
+						margin-top: 20px;
+					}
+				}
+				p{		
+					@include text-format(16px,#0c101a,300);
+					line-height: 24px;
+					@media screen and (max-width:767px){
+						font-size: 14px;	
+						line-height: 20px;			
+					}
+					a{
+						color: $blue-text;
+					}
+				}			
+					.custom-form{	
+						.form-group{
+							input{
+								&.form-control{
+									border-color: $color-e21;
+									@include border-radius(0);						
+									@include text-format(16px,$color-89,400);
+									padding: 15px 15px 15px 55px;
+									@media screen and (max-width:1400px){
+										font-size: 14px;
+										padding: 10px 15px 10px 40px;
+									}
+								}
+							}
+							&.icon{
+								position: relative;
+								&::before{
+									@include pos(a, 10px auto auto 20px);						
+									font-size: 24px;
+									font-family: 'icomoon';	
+									color: $color-89;
+									@media screen and (max-width:1400px){
+										font-size: 18px;
+										top:9px;
+										left:10px;
+									}							
+								}
+								&.email-icon{
+									&::before{
+										content: "\e901";		
+									}
+								}
+							}				
+							button[type="submit"]{
+								background-color: $yellow-color;
+								@include text-format(16px,$white-color,600);
+								text-transform: uppercase;
+								padding: 15px 5px;
+								cursor: pointer;
+								@media screen and (max-width:1400px){
+									font-size: 14px;
+									padding: 10px 5px;
+								}
+								i{
+									margin-left: 10px;
+									@media screen and (max-width:1400px){
+										margin-left: 5px;
+									}
+								}
+							}			
+						}		
+					}
+				&.incorrectEmail{
+					h2{
+						color:#f72e2e;
+					}
+				}
+				&.verifyModal{		
+					h2{
+						color:#0bc23a;
+					}
+				}
+			}
+		}
+	}
+	&.flightModal{
+		.modal-content{
+			.modal-header {
+				background-color: #f6f4f4;
+				text-align: center;
+				h2{
+					@include text-format(24px,$color-42,600);
+					padding:20px; 
+					@media screen and (max-width:992px){
+						padding: 10px;
+						font-size: 18px;
+					}
+				}
+			}
+			.modal-body {
+			    padding: 40px 60px;
+			    @media screen and (max-width:992px){
+			    	padding: 20px 20px;
+			    }
+			    .package-flight{ 
+			    	&::before {
+						content: none;
+					}
+			    	.flightResult-box {
+					    background:none;
+					}
+					.flightmainOuter{
+						.flight-main{
+							padding:0; 
+							h5{
+								&.p-loc{
+									margin-top: 0px;
+								}
+							}			
+						}
+					}		
+					.flightWebsite{
+						padding: 10px 0px;
+						@media screen and (max-width:992px){
+							padding: 10px 0px;
+						}				
+					}
+				}
+			}
+		}
+	}
+}

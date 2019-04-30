@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gwv13j');
+  src:  url('fonts/icomoon.eot?gwv13j#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?gwv13j') format('truetype'),
+    url('fonts/icomoon.woff?gwv13j') format('woff'),
+    url('fonts/icomoon.svg?gwv13j#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-forgeticon:before {
+  content: "\e92c";
+}
+.icon-black-plane:before {
+  content: "\e92b";
+}
+.icon-gym:before {
+  content: "\e925";
+}
+.icon-hanger:before {
+  content: "\e926";
+}
+.icon-hicon:before {
+  content: "\e927";
+}
+.icon-otherservice:before {
+  content: "\e928";
+}
+.icon-pet:before {
+  content: "\e929";
+}
+.icon-room-service:before {
+  content: "\e92a";
+}
+.icon-report:before {
+  content: "\e923";
+}
+.icon-thumb:before {
+  content: "\e924";
+}
+.icon-list-view:before {
+  content: "\e921";
+}
+.icon-map-view:before {
+  content: "\e922";
+}
+.icon-icon:before {
+  content: "\e91a";
+}
+.icon-handicap:before {
+  content: "\e91b";
+}
+.icon-iron:before {
+  content: "\e91c";
+}
+.icon-parking:before {
+  content: "\e91d";
+}
+.icon-pool:before {
+  content: "\e91e";
+}
+.icon-spoon:before {
+  content: "\e91f";
+}
+.icon-wifi-icon:before {
+  content: "\e920";
+}
+.icon-minus:before {
+  content: "\e918";
+}
+.icon-plus:before {
+  content: "\e919";
+}
+.icon-package:before {
+  content: "\e917";
+}
+.icon-arwtransfer:before {
+  content: "\e913";
+}
+.icon-calendar:before {
+  content: "\e914";
+}
+.icon-clock:before {
+  content: "\e915";
+}
+.icon-r-arwtransfer-1:before {
+  content: "\e916";
+}
+.icon-accomodation:before {
+  content: "\e910";
+}
+.icon-plane:before {
+  content: "\e911";
+}
+.icon-trip:before {
+  content: "\e912";
+}
+.icon-completestar:before {
+  content: "\e90d";
+}
+.icon-starhalfempty:before {
+  content: "\e90e";
+}
+.icon-vaccstar:before {
+  content: "\e90f";
+}
+.icon-location:before {
+  content: "\e90b";
+}
+.icon-phone:before {
+  content: "\e90c";
+}
+.icon-user:before {
+  content: "\e90a";
+}
+.icon-down-arrow:before {
+  content: "\e900";
+}
+.icon-envelope:before {
+  content: "\e901";
+}
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-facebook-logo:before {
+  content: "\e903";
+}
+.icon-googleplus:before {
+  content: "\e904";
+}
+.icon-google-plus1:before {
+  content: "\e905";
+}
+.icon-key:before {
+  content: "\e906";
+}
+.icon-menu:before {
+  content: "\e907";
+}
+.icon-right-arw:before {
+  content: "\e908";
+}
+.icon-uparrow:before {
+  content: "\e909";
+}

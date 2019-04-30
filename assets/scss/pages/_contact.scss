@@ -1,0 +1,79 @@
+.main-inner{
+	.contact-page{
+		.map-outer{
+			img, iframe{
+				width:100%;
+			}
+		}
+		h3{
+			@include text-format(25px,$white-color,600);
+			text-transform: uppercase;
+			padding-top: 0;
+			@media screen and (max-width:992px){
+				font-size: 20px;
+			}
+		}
+		p{
+			@include text-format(18px,$white-color,400);
+			line-height: 25px;	
+			@media screen and (max-width:992px){
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+		.contact-in-box{
+			margin-top: -255px;
+			@media screen and (max-width:1024px){
+				margin-top: -155px;
+			}
+			@media screen and (max-width:767px){
+				margin-top: 0px;
+			}
+			.get-intouch{
+				padding:50px 65px;
+				background-color: $yellow-color;
+				@media screen and (max-width:992px){
+					padding:25px 30px;
+				}
+				@media screen and (max-width:767px){
+					padding:20px 15px;
+				}
+				ul{
+					margin-top: 20px;
+					li{
+						@include pos(r,null);
+						margin-top: 35px;
+						@include text-format(18px,$white-color,400);
+						padding-left: 55px;
+						@media screen and (max-width:992px){
+							margin-top: 10px;
+							font-size: 14px;
+							padding-left: 30px;
+						}
+						i{
+							font-size: 30px;
+							@include pos(a,0 auto auto 0);
+							@media screen and (max-width:992px){
+								font-size: 18px;
+							}
+						}
+						
+					}
+				}
+			}
+			.contact-form{
+				padding:50px 65px;	
+				background-color: $white-color;		
+				@media screen and (max-width:992px){
+					padding:25px 30px;
+				}
+				@media screen and (max-width:767px){
+					padding:20px 15px;
+				}	
+				h3{
+					color: $color-42;			
+				}
+			}
+		}
+	}
+}

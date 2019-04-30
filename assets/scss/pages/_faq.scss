@@ -1,0 +1,52 @@
+.faq-outer{
+	.card{
+		margin-bottom: 12px;
+		.card-header{
+			background-color: $white-color;
+			padding: 0;
+			h5{
+				@include pos(r, null);
+				&::before{
+					@include pos(a, calc(50% - 20px) 25px auto auto);
+					content: "\2b";					
+					@include text-format(32px,$color-42,700); 
+					font-family: 'Glyphicons Halflings';
+					@media screen and (max-width:992px){
+						font-size:18px;
+						top: calc(50% - 12px);
+						right: 12px;
+					}
+				}
+				&.show{
+					&::before{
+						content: "\2212";											
+					}
+				}
+				a{
+					@include text-format(18px,$color-42,400);
+					padding:20px 25px;
+					display: inline-block;
+					@media screen and (max-width:1400px){
+						font-size: 16px;
+					}
+					@media screen and (max-width:992px){
+						padding:12px 15px;
+					}
+				}
+			}
+		}
+		.card-block{
+			padding:20px 25px;
+			@media screen and (max-width:992px){
+				padding:12px 15px;
+			}
+			p{
+				@include text-format(16px,$color-80,400);
+				text-align: justify;
+				@media screen and (max-width:1400px){
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

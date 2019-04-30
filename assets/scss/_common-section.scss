@@ -1,0 +1,540 @@
+.travel-box{
+	padding-top: 0;
+	padding-bottom: 30px;
+	.travel-boxin{
+		@include fluid-ratio(4 3.7, img);
+		overflow: hidden;
+		img{
+			object-fit: cover;
+			min-height: 100%;
+			min-width: 100%;
+		}
+		.hoverbox{
+			text-align: center;					
+			@include pos(a, 0 auto auto 0);
+			@include square(100%);					
+			@include translate(100%,100%);
+			@include transition(compact(all 0.4s linear));
+			background-color: rgba(0,0,0,0.8);
+			padding: 25px;
+			@media screen and (max-width:992px){
+				padding: 15px;
+			}
+			.hoverbox-in{
+				border: 1px solid $white-color;
+				@include square(100%);
+				h4{
+					@include text-format(20px,$white-color,600);
+					@include translate(100%,-400%);
+					@include transition(compact(all 0.8s linear));
+					margin-bottom: 20px;
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}
+				}
+				a{
+					@include text-format(15px,$white-color,600);
+					padding: 8px 15px;
+					border:1px solid $white-color;
+					@media screen and (max-width:992px){
+						font-size: 13px;
+						padding: 5px 10px;
+					}
+					&:hover{
+						background-color: $yellow-color;
+						border-color: $yellow-color;
+					}
+				}
+			}
+		}
+		&:hover{
+			.hoverbox{
+				@include translate(0%,0%);
+				.hoverbox-in{
+					h4{
+						@include translate(0%,0%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.tripfinder-box{
+	padding-top: 0;
+	padding-bottom: 15px;
+	.tripfinder-boxin{
+		@include fluid-ratio(4 3.7, img);
+		overflow: hidden;
+		img{
+			object-fit: cover;
+			min-height: 100%;
+			min-width: 100%;
+		}
+		.hoverbox{
+			@include pos(a, auto auto 0 0);
+			@include square(100%);					
+			padding: 25px;
+			@media screen and (max-width:992px){
+				padding: 15px;
+			}
+			.hoverbox-in{
+				@include square(100%);
+				h3{
+					@include text-format(16px,$white-color,400);
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}
+					strong{
+						@include text-format(20px,$white-color,600);
+						@media screen and (max-width:992px){
+							font-size: 16px;
+						}
+					}
+				}
+				h4{
+					@include text-format(16px,$white-color,400);
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+.pd-box{
+	margin-bottom: 30px;			
+	@media screen and (max-width:992px){
+		margin-bottom: 20px;
+	}
+	@media screen and (max-width:767px){
+		margin-bottom: 10px;
+	}
+	.pd-box-in{
+		border: 1px solid #eaeaea;
+		.pd-img{
+			@include pos(r, null);
+			@include fluid-ratio(3 2, img);
+			overflow: hidden;
+			img{
+				object-fit: cover;
+				min-height: 100%;
+				min-width: 100%;
+			}
+			.off{
+				@include pos(a, 0 auto auto 0px);
+				@include text-format(16px,$white-color,800);
+				text-align: center;
+				background-color: $red;
+				@include height-width(50px,58px);
+				text-transform: uppercase;
+				line-height: 20px;
+				padding-top: 4px;
+				@media screen and (max-width:992px){
+					font-size: 14px;
+					@include height-width(40px,48px);
+					line-height: 18px;
+				}
+				&::before, &::after{
+					position: absolute;
+					content: '';
+					bottom: -10px;
+					border-top: 10px solid $red;
+				}						
+				&::before {								
+					left: 0;								
+					border-right: 29px solid transparent;
+				}
+				&::after {
+					right: 0;
+					border-left: 29px solid transparent;
+				}										
+			}
+		}
+		.pd-info{
+			padding: 20px 30px;
+			background-color: $white-color;
+			@media screen and (max-width:1300px){
+				padding: 10px 20px;
+			}
+			@media screen and (max-width:992px){
+				padding: 10px 10px;
+			}
+			.star-rating{
+				margin-bottom: 10px;
+				ul{
+					@include display(middle);
+					li{
+						@include display(middle);
+						font-size: 18px;
+						margin-right:5px;
+						color: orange;
+						@media screen and (max-width:1300px){
+							font-size: 16px;
+							margin-right:2px;
+						}
+					}
+				}
+				span{
+					@include display(middle);
+					margin-left:10px;
+					@include text-format(15px,$color-80,400);
+					@media screen and (max-width:1300px){
+						font-size: 14px;
+					}
+				}
+			}
+			.pd-info-in{
+				h3{
+					@include text-format(16px,$color-80,600);
+					padding-top: 0;
+					strong{
+						@include text-format(20px,$color-42,600);
+						@media screen and (max-width:1300px){
+							font-size: 16px;
+						}
+						@media screen and (max-width:992px){
+							font-size: 14px;
+						}
+					}
+					@media screen and (max-width:1300px){
+						font-size: 14px;
+					}
+				}
+				h4{
+					@include text-format(20px,$color-42,600);
+					@media screen and (max-width:1300px){
+						font-size: 16px;
+					}
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}
+				}
+				h5{
+					@include text-format(16px,$color-80,400);
+					@media screen and (max-width:1300px){
+						font-size: 14px;
+					}
+				}
+				p{
+					@include text-format(15px,$color-80,400);
+					padding-bottom: 12px;
+					@media screen and (max-width:1300px){
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+	&.hotel-search{
+		margin-bottom: 25px;			
+		@media screen and (max-width:992px){
+			margin-bottom: 15px;
+		}
+		@media screen and (max-width:767px){
+			margin-bottom: 10px;
+		}
+		.pd-box-in{	
+			border: 0 none;						
+			.pd-info{
+				padding: 20px;
+				@media screen and (max-width:1300px){
+					padding: 10px;
+				}								
+				.pd-info-in{
+					h3{
+						@include text-format(14px,$color-80,400);
+						strong{
+							font-size: 18px;
+							@media screen and (max-width:1300px){
+								font-size: 15px;
+							}
+							@media screen and (max-width:992px){
+								font-size: 14px;
+							}
+						}	
+						&.price-btn{
+							span{
+								width:49%;
+								@include display(middle);
+							}
+							a{
+								width:49%;
+								@include display(middle);
+							}
+						}									
+					}
+					ul{
+						&.website-list{
+							margin-bottom: 25px;
+							margin-top: 10px;
+							li{
+								padding: 8px;
+								background-color: white;
+								border-bottom:1px dashed #dbdbdb;
+								@include text-format(15px,$blue-text,400);
+								@media screen and (max-width:992px){
+									font-size: 14px;
+								}
+								a{  
+									color: $blue-text;
+									width:55%;
+									@include display(middle);
+									white-space: nowrap;
+									text-overflow: ellipsis;
+									overflow: hidden;
+								}
+								span{
+									width:43%;
+									@include display(middle);
+								}
+								&:nth-child(2n) {
+								    border: 0 none;
+								    background-color: #fafafa;
+								}
+							}
+						}
+					}
+					h4{
+						@include text-format(17px,$color-42,400);
+						@media screen and (max-width:1300px){
+							font-size: 14px;
+						}
+						@media screen and (max-width:992px){
+							font-size: 13px;
+						}
+					}				
+				}
+			}
+		}
+	}
+}
+%flightResult-box{
+	border: 1px solid $color-e8;
+	background-color: white;
+	margin-top: 20px;
+	.flightmainOuter{
+		border-bottom: 1px solid $color-e8;
+		.flight-main{
+			padding: 0 40px;
+			border-right: 1px solid $color-e8;
+			@media screen and (max-width:1200px){
+				padding: 0px 25px;
+			}
+			@media screen and (max-width:767px){
+				padding: 0px 15px;
+			}
+			.infobox{
+				margin: 20px 0;
+				.website-img{
+					text-align: center;
+					@include square(64px);
+					padding: 15px;
+					border: 1px solid $color-e8;
+					@include display(middle);
+					@media screen and (max-width:1200px){
+						@include square(50px);
+						padding: 5px;
+					}
+					@media screen and (max-width:992px){
+						vertical-align: top;
+					}
+					img{
+						object-fit:cover;
+						overflow: hidden;
+						max-width: 100%;
+					}
+				}
+				.flightDetail-info{
+					text-align: center;
+					width:calc(100% - 70px);
+					@include display(middle);
+					@media screen and (max-width:1200px){
+						width:calc(100% - 60px);
+					}
+					@media screen and (max-width:565px){
+						width:100%;
+						margin-top: 10px;
+					}
+					.box{
+						width:32%;
+						padding:0 15px; 
+						@include display(middle);
+						&:nth-child(2){
+							@media screen and (max-width:992px){
+								background-color: #f7f7f7;
+								padding: 10px;
+								margin: 10px 0;
+							}
+						}
+						@media screen and (max-width:992px){
+							width:100%;
+							text-align: left !important;
+						}
+						@media screen and (max-width:565px){
+							padding: 0;
+						}
+						h2{
+							@include text-format(16px,$color-80,600);
+							margin-bottom: 10px;
+							@media screen and (max-width:1200px){
+								font-size:14px;
+							}
+							@media screen and (max-width:992px){
+								margin-bottom: 5px;
+							}
+							span{
+								@include text-format(20px,$color-42,600);
+								@media screen and (max-width:1200px){
+									font-size:16px;
+								}
+							}
+						}
+						h3{
+							padding: 0;
+							@include text-format(18px,$color-80,600);
+							@media screen and (max-width:1200px){
+								font-size:16px;
+							}
+						}
+						h5{
+							&.time-plane{
+								@include text-format(16px,$color-80,400);
+								@include pos(r, null);
+								margin-right: 30px;
+								padding-bottom: 14px;
+								@media screen and (max-width:1200px){
+									font-size:14px;
+								}
+								&:after {
+							      @include pos(a, auto 0px 0 auto);
+							      content: "";
+							      color:$yellow-color;
+							      width:100%;
+							      font-family: 'icomoon' !important;
+							      border-bottom: 1px solid $color-e8;
+							    }
+							    &:before {
+							      @include pos(a, 24px -25px auto auto);
+							      content: "\e92b";
+							      color:$yellow-color;
+							      font-family: 'icomoon' !important;
+							      font-size:16px; 
+							      @media screen and (max-width:1200px){
+							        font-size:12px; 
+							      }           
+							    }
+							}
+						}
+					}
+				}
+			}
+							
+		}
+		.bookingTotel{
+			text-align: center;
+			h2{
+				 @include text-format(28px,$color-42,600);
+				 margin-bottom: 15px;
+			}
+			a{
+				&.btn{
+					&.custom-btn{
+						padding:8px 20px;
+						font-weight: 400;
+						i{
+							margin-left: 5px;
+						}
+					}
+				}
+
+			}
+		}
+	}		
+	.flightDetail{
+		padding: 40px 45px;
+		border-bottom: 1px solid $color-e8;
+		@media screen and (max-width:1200px){
+			padding: 20px 25px;
+		}
+		@media screen and (max-width:767px){
+			padding: 10px 15px;
+		}
+		h2{
+			@include text-format(18px,$color-42,400);
+			margin-bottom: 0;
+			line-height: 22px;	
+			@media screen and (max-width:1200px){
+				font-size: 14px;
+				line-height: 18px;
+			}
+			span{
+				font-weight: 600;
+			}
+		}
+		ul{
+			width:100%;
+			margin-top: 10px;
+			li{
+				display: inline-block;
+				padding: 0 15px;
+				border-left: 1px solid $color-42;
+				@media screen and (max-width:767px){
+					border-left:0 none;
+					padding: 5px 0px;
+					width: 100%;
+				}
+				&:first-child{
+					padding-left: 0;
+					border: 0 none;
+				}
+			}
+		}			
+	}
+	.flightWebsite{
+		padding: 40px 45px;
+		@media screen and (max-width:1200px){
+			padding: 20px 25px;
+		}
+		@media screen and (max-width:767px){
+			padding: 10px 0px;
+		}
+		.websiteList{
+			margin-top: 10px;
+			@media screen and (max-width:767px){
+				margin-bottom: 10px;
+				margin-top: 0;
+			}
+			li{
+				display: inline-block;
+				border-left:1px solid $color-80;
+				padding: 0 8px;
+				line-height: 16px;
+				@media screen and (max-width:767px){
+					width:100%;
+					padding:5px 0;
+					border: 0 none; 
+				}
+				&:first-child{
+					padding-left: 0;
+					border: 0 none;
+				}
+				a{						
+					@include text-format(15px,$blue-text,400);
+				}
+			}
+		}
+		.btn{
+			&.viewmore-btn{
+				background-color: white;
+				text-transform: none;
+				i{
+					margin-left: 5px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
